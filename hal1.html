@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Day My Favorite Person</title>
+
+    <!-- CSS asli tetap dipakai -->
+    <link rel="stylesheet" href="hal1.css">
+    <link rel="stylesheet" href="hal2.css">
+    <link rel="stylesheet" href="hal3.css">
+
+    <!-- Penyesuaian khusus agar ketiga desain bisa berada di satu halaman -->
+    <link rel="stylesheet" href="gabungan.css">
+</head>
+<body>
+
+<!-- BAGIAN 1: KALENDER DAN MUSIK -->
+<div class="sky section-one">
+
+    <div class="cloud cloud1">☁</div>
+    <div class="cloud cloud2">☁</div>
+    <div class="cloud cloud3">☁</div>
+    <div class="cloud cloud4">☁</div>
+    <div class="cloud cloud5">☁</div>
+
+    <div class="background-hearts">
+        <span>♡</span>
+        <span>♡</span>
+        <span>♥</span>
+        <span>♡</span>
+        <span>♥</span>
+        <span>♡</span>
+    </div>
+
+    <main class="content">
+
+        <h2 class="top-title">
+            The Day My Favorite Person
+            <span>♥</span>
+        </h2>
+
+        <section class="calendar-section">
+
+            <div class="star star-left">✦</div>
+            <div class="star star-right">✦</div>
+
+            <h1 class="month-title">November</h1>
+
+            <div class="calendar">
+                <div class="weekdays">
+                    <span>S</span>
+                    <span>M</span>
+                    <span>T</span>
+                    <span>W</span>
+                    <span>T</span>
+                    <span>F</span>
+                    <span>S</span>
+                </div>
+
+                <div class="dates">
+                    <span class="birthday">1</span>
+                    <span>2</span>
+                    <span>3</span>
+                    <span>4</span>
+                    <span>5</span>
+                    <span>6</span>
+                    <span>7</span>
+
+                    <span>8</span>
+                    <span>9</span>
+                    <span>10</span>
+                    <span>11</span>
+                    <span>12</span>
+                    <span>13</span>
+                    <span>14</span>
+
+                    <span>15</span>
+                    <span>16</span>
+                    <span>17</span>
+                    <span>18</span>
+                    <span>19</span>
+                    <span>20</span>
+                    <span>21</span>
+
+                    <span>22</span>
+                    <span>23</span>
+                    <span>24</span>
+                    <span>25</span>
+                    <span>26</span>
+                    <span>27</span>
+                    <span>28</span>
+
+                    <span>29</span>
+                    <span>30</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="music-section">
+            <p class="music-heading">Nyalakan musiknya ♡</p>
+
+            <div class="music-player">
+                <div class="record" id="record">
+                    <div class="record-center"></div>
+                </div>
+
+                <div class="song-cover">
+                    <div class="cover-circle">♡</div>
+                    <div class="cover-text">A song<br>for you</div>
+                </div>
+
+                <div class="song-info">
+                    <p class="song-title">A song for you</p>
+                    <p class="song-artist">With love, always ♡</p>
+                </div>
+
+                <button id="playButton" aria-label="Putar musik">
+                    ▶
+                </button>
+            </div>
+
+            <audio id="myMusic" loop>
+                <source src="hadiah.mpeg" type="audio/mpeg">
+            </audio>
+        </section>
+
+        <p class="bottom-note">
+            a little melody for your special day
+        </p>
+
+    </main>
+
+    <!-- Hati yang muncul saat musik dimainkan -->
+    <div id="heartContainer"></div>
+</div>
+
+
+<!-- BAGIAN 2: PESAN ULANG TAHUN -->
+<div class="sky section-two">
+
+    <div class="cloud cloud1">☁</div>
+    <div class="cloud cloud2">☁</div>
+    <div class="cloud cloud3">☁</div>
+    <div class="cloud cloud4">☁</div>
+
+    <div class="floating-hearts">
+        <span>♡</span>
+        <span>♥</span>
+        <span>♡</span>
+        <span>♥</span>
+        <span>♡</span>
+        <span>♥</span>
+        <span>♡</span>
+        <span>♥</span>
+        <span>♡</span>
+        <span>♥</span>
+    </div>
+
+    <main class="main-content">
+
+        <div class="small-title">
+            A LITTLE MESSAGE FOR YOU ♡
+        </div>
+
+        <h1 class="main-title">
+            To My Favorite Person
+        </h1>
+
+        <p class="subtitle"></p>
+
+        <section class="memory-section">
+
+            <div class="photo-gallery">
+                <div class="photo-card photo1">
+                    <img src="pt1.jpeg" alt="Kenangan pertama">
+                </div>
+
+                <div class="photo-card photo2">
+                    <img src="pt2.jpeg" alt="Kenangan kedua">
+                </div>
+
+                <div class="photo-card photo3">
+                    <img src="pt3.jpeg" alt="Kenangan ketiga">
+                </div>
+
+                <div class="photo-card photo4">
+                    <img src="pt4.jpeg" alt="Kenangan keempat">
+                </div>
+
+                <div class="photo-card photo5">
+                    <img src="pt5.jpeg" alt="Kenangan kelima">
+                </div>
+            </div>
+
+            <article class="message-content">
+
+                <div class="message-decoration">♡</div>
+
+                <h2>Haii!</h2>
+
+                <p class="message-greeting">
+                    Baca ini yyaa ♡ ♡
+                </p>
+
+                <div class="message-text">
+                    <p>
+                        HAPPY BIRTHDAY IA, aku bikin ini khusus buat kamu ia,
+                        aku doa'in semoga ia panjang umur sehat selalu, di mudahkan rezekinya
+                        diiringi dengan hal hal baik, dan selalu di lindungi Allah SWT.
+                    </p>
+
+                    <p>
+                        Semoga kamu menjadi pribadi yang sholeh, baik, sabar, dan ga gampang menyerah,
+                        semoga keinginan kamu selalu di wujudkan, sehat selalu ia ♡ ♡
+                    </p>
+
+                    <p>
+                        makasih ya kamu udah pernah hadir di hidup aku
+                    </p>
+
+                    <p>
+                        I hope life keeps being kind to you and brings you everything you deserve
+                    </p>
+
+                    <p>
+                        Happy birthday to my favorite person, life is so much
+                        better with you. hope your day is as amazing as you are i love you!
+                    </p>
+                </div>
+
+                <div class="message-ending">
+                    With love,
+                    <br>
+                    ♡
+                </div>
+
+            </article>
+        </section>
+
+        <div class="bottom-note">
+            there are still many memories to tell... ♡
+        </div>
+
+    </main>
+</div>
+
+
+<!-- BAGIAN 3: GALERI FOTO POLAROID -->
+<div class="sky section-three">
+
+    <div class="cloud cloud1">☁</div>
+    <div class="cloud cloud2">☁</div>
+    <div class="cloud cloud3">☁</div>
+    <div class="cloud cloud4">☁</div>
+
+    <div class="decorations">
+        <span>♡</span>
+        <span>✦</span>
+        <span>♥</span>
+        <span>✧</span>
+        <span>♡</span>
+        <span>★</span>
+        <span>♥</span>
+        <span>✦</span>
+        <span>♡</span>
+        <span>✧</span>
+        <span>♥</span>
+        <span>★</span>
+        <span>♡</span>
+        <span>✦</span>
+    </div>
+
+    <main class="gallery-container">
+
+        <p class="small-title"></p>
+
+        <h1>Happy birthday Setia Rizky ♡ ♡</h1>
+
+        <p class="subtitle">♡</p>
+
+        <section class="polaroid-gallery">
+
+            <div class="polaroid polaroid-photo1">
+                <img src="ph4.jpeg" alt="Birthday photo 1">
+                <div class="caption">
+                    ♡
+                </div>
+            </div>
+
+            <div class="polaroid polaroid-photo2">
+                <img src="ph3.jpeg" alt="Birthday photo 2">
+                <div class="caption">
+                   
+                </div>
+            </div>
+
+            <div class="polaroid polaroid-photo3">
+                <img src="ph2.jpeg" alt="Birthday photo 3">
+                <div class="caption">
+                     ✧
+                </div>
+            </div>
+
+            <div class="polaroid polaroid-photo4">
+                <img src="ph1.jpeg" alt="Birthday photo 4">
+                <div class="caption">
+                  ♡
+                </div>
+            </div>
+
+        </section>
+
+        <div class="gallery-ending">
+            <span>♡</span>
+            Every picture tells a story.
+            <span>♡</span>
+        </div>
+
+    </main>
+</div>
+
+<!-- Satu audio dan satu script untuk seluruh halaman -->
+<script src="hal1.js"></script>
+</body>
+</html>

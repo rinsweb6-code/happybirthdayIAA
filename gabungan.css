@@ -1,0 +1,121 @@
+/*
+  CSS tambahan untuk halaman gabungan.
+  File hal1.css, hal2.css, dan hal3.css tetap dipakai.
+*/
+
+/* Izinkan halaman memanjang ke bawah agar bisa di-scroll */
+html,
+body {
+    min-height: 100%;
+    height: auto;
+    overflow-x: hidden;
+}
+
+.sky {
+    overflow: visible;
+}
+
+/* Pertahankan background masing-masing halaman */
+.section-one {
+    background:
+        radial-gradient(ellipse at 50% 45%,
+        #b9dafa 0%,
+        #91bfe8 55%,
+        #75a9d8 100%);
+}
+
+.section-two {
+    background:
+        radial-gradient(
+            ellipse at center,
+            #c9e6fa,
+            #a5cfee,
+            #83b5df
+        );
+}
+
+.section-three {
+    background:
+        radial-gradient(
+            ellipse at center,
+            #d5edff,
+            #add5f3,
+            #85b8e0
+        );
+}
+
+/* Masing-masing bagian minimal setinggi layar, tetapi boleh lebih panjang */
+.section-one,
+.section-two,
+.section-three {
+    width: 100%;
+    position: relative;
+}
+
+/* Kembalikan gaya judul bagian 2 setelah CSS bagian 3 dimuat */
+.section-two .small-title {
+    font-size: 11px;
+    letter-spacing: 3px;
+    font-weight: 600;
+    color: #315c82;
+    text-align: center;
+}
+
+.section-two .subtitle {
+    font-size: 12px;
+    font-weight: 500;
+    color: #365e82;
+    margin-top: 8px;
+    letter-spacing: 1px;
+}
+
+/* Kembalikan gaya catatan bawah bagian 1 */
+.section-one .bottom-note {
+    font-family: 'Dancing Script', cursive;
+    color: white;
+    font-size: 21px;
+    font-weight: 400;
+    margin-top: 55px;
+    text-align: center;
+    text-shadow: none;
+}
+
+/* Nama class foto polaroid dibuat berbeda dari foto background bagian 2 */
+.polaroid-photo1 {
+    transform: rotate(-8deg);
+    animation-delay: 0s;
+}
+
+.polaroid-photo2 {
+    transform: rotate(7deg);
+    animation-delay: 0.7s;
+}
+
+.polaroid-photo3 {
+    transform: rotate(6deg);
+    animation-delay: 1.2s;
+}
+
+.polaroid-photo4 {
+    transform: rotate(-7deg);
+    animation-delay: 1.7s;
+}
+
+/* Kemiringan polaroid di layar HP */
+@media (max-width: 600px) {
+    .polaroid-photo1 {
+        transform: rotate(-7deg);
+    }
+
+    .polaroid-photo2 {
+        transform: rotate(7deg);
+    }
+
+    .polaroid-photo3 {
+        transform: rotate(6deg);
+    }
+
+    .polaroid-photo4 {
+        transform: rotate(-6deg);
+    }
+}

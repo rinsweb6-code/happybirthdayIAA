@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600&family=Oswald:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+}
+
+.sky {
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+    background: linear-gradient(
+        180deg,
+        #9bc9ed,
+        #b9dcf5,
+        #8bbde7
+    );
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Judul */
+
+.heading {
+    position: absolute;
+    top: 26%;
+    text-align: center;
+    z-index: 2;
+    color: white;
+    text-shadow: 1px 2px 4px #668db1;
+}
+
+.heading h1,
+.heading h2 {
+    font-family: 'Dancing Script', cursive;
+    font-weight: 500;
+}
+
+.heading h1 {
+    font-size: 48px;
+}
+
+.heading h2 {
+    font-size: 48px;
+}
+
+/* Amplop */
+
+.envelope-container {
+    position: absolute;
+    top: 44%;
+    width: 270px;
+    height: 180px;
+    cursor: pointer;
+    z-index: 5;
+    perspective: 1000px;
+}
+
+.envelope {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #194b79;
+    border-radius: 5px;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.25);
+}
+
+/* Bagian belakang */
+
+.envelope-back {
+    position: absolute;
+    inset: 0;
+    background: #17436d;
+    border-radius: 5px;
+}
+
+/* Kertas surat */
+
+.letter {
+    position: absolute;
+    width: 85%;
+    height: 85%;
+    background: #f8f5ed;
+    left: 7.5%;
+    top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #6689a8;
+    font-family: 'Dancing Script', cursive;
+    font-size: 25px;
+    transition: 1s ease;
+    z-index: 2;
+}
+
+/* Depan amplop */
+
+.envelope-front {
+    position: absolute;
+    inset: 0;
+    background: #205787;
+    clip-path: polygon(
+        0 35%,
+        50% 75%,
+        100% 35%,
+        100% 100%,
+        0 100%
+    );
+    z-index: 3;
+}
+
+/* Tutup amplop */
+
+.envelope-flap {
+    position: absolute;
+    inset: 0;
+    background: #286596;
+    clip-path: polygon(
+        0 0,
+        100% 0,
+        50% 60%
+    );
+    transform-origin: top;
+    transition: transform 0.8s ease;
+    z-index: 4;
+}
+
+/* Segel */
+
+.seal {
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 48px;
+    height: 48px;
+    background: #c7e2f4;
+    border: 3px solid #719bbd;
+    border-radius: 50%;
+    color: #345e80;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    z-index: 5;
+}
+
+/* Animasi membuka */
+
+.envelope-container.open .envelope-flap {
+    transform: rotateX(180deg);
+    z-index: 1;
+}
+
+.envelope-container.open .letter {
+    transform: translateY(-100px);
+}
+
+/* Tulisan tap */
+
+.tap-text {
+    position: absolute;
+    top: 69%;
+    font-family: 'Oswald', sans-serif;
+    font-size: 23px;
+    color: white;
+    text-shadow: 1px 2px 4px #668db1;
+    z-index: 5;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    50% {
+        opacity: 0.5;
+    }
+}
+
+/* Awan */
+
+.cloud {
+    position: absolute;
+    color: rgba(255,255,255,0.65);
+    font-size: 100px;
+    animation: moveCloud linear infinite;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.cloud1 {
+    top: 5%;
+    left: -150px;
+    animation-duration: 35s;
+}
+
+.cloud2 {
+    top: 20%;
+    left: -180px;
+    font-size: 75px;
+    animation-duration: 45s;
+    animation-delay: 5s;
+}
+
+.cloud3 {
+    top: 55%;
+    left: -150px;
+    font-size: 120px;
+    animation-duration: 40s;
+    animation-delay: 10s;
+}
+
+.cloud4 {
+    top: 75%;
+    left: -180px;
+    font-size: 85px;
+    animation-duration: 50s;
+    animation-delay: 3s;
+}
+
+.cloud5 {
+    top: 38%;
+    left: -180px;
+    font-size: 65px;
+    animation-duration: 42s;
+    animation-delay: 15s;
+}
+
+.cloud6 {
+    top: 88%;
+    left: -180px;
+    font-size: 100px;
+    animation-duration: 38s;
+    animation-delay: 8s;
+}
+
+@keyframes moveCloud {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(120vw);
+    }
+}
+
+/* Tampilan HP */
+
+@media (max-width: 600px) {
+
+    .heading {
+        top: 27%;
+    }
+
+    .heading h1,
+    .heading h2 {
+        font-size: 39px;
+    }
+
+    .envelope-container {
+        width: 230px;
+        height: 155px;
+    }
+
+    .tap-text {
+        top: 69%;
+        font-size: 21px;
+    }
+}

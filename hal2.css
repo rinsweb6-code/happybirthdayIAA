@@ -1,0 +1,511 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+/* BACKGROUND */
+
+.sky {
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            ellipse at center,
+            #c9e6fa,
+            #a5cfee,
+            #83b5df
+        );
+}
+
+/* KONTEN UTAMA */
+
+.main-content {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 65px 25px 60px;
+}
+
+/* JUDUL */
+
+.small-title {
+    font-size: 11px;
+    letter-spacing: 3px;
+    font-weight: 600;
+    color: #315c82;
+    text-align: center;
+}
+
+.main-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 52px;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    margin-top: 12px;
+
+    text-shadow: 2px 3px 5px #527fa8;
+}
+
+.subtitle {
+    font-size: 12px;
+    font-weight: 500;
+    color: #365e82;
+    margin-top: 8px;
+    letter-spacing: 1px;
+}
+
+/* AREA FOTO DAN TULISAN */
+
+.memory-section {
+    position: relative;
+    width: 100%;
+    max-width: 850px;
+
+    margin-top: 55px;
+}
+
+/* GALERI FOTO */
+
+.photo-gallery {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+
+    pointer-events: none;
+}
+
+.photo-card {
+    position: absolute;
+
+    width: 190px;
+    height: 220px;
+
+    padding: 5px;
+
+    background: rgba(255,255,255,0.35);
+    border: 1px solid rgba(255,255,255,0.5);
+
+    box-shadow: 0 8px 25px rgba(40,80,120,0.15);
+
+    opacity: 0.48;
+
+    animation: photoFloat 5s ease-in-out infinite alternate;
+}
+
+.photo-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* POSISI FOTO */
+
+.photo1 {
+    top: 10px;
+    left: -30px;
+    transform: rotate(-13deg);
+    animation-delay: 0s;
+}
+
+.photo2 {
+    top: 170px;
+    right: -35px;
+    transform: rotate(12deg);
+    animation-delay: 1s;
+}
+
+.photo3 {
+    top: 430px;
+    left: -20px;
+    transform: rotate(9deg);
+    animation-delay: 2s;
+}
+
+.photo4 {
+    top: 650px;
+    right: -25px;
+    transform: rotate(-10deg);
+    animation-delay: 1.5s;
+}
+
+.photo5 {
+    top: 950px;
+    left: 35%;
+    transform: rotate(-7deg);
+    animation-delay: 2.5s;
+}
+
+/* ANIMASI FOTO */
+
+@keyframes photoFloat {
+    from {
+        translate: 0 0;
+    }
+
+    to {
+        translate: 0 -25px;
+    }
+}
+
+/* TULISAN TANPA KOTAK */
+
+.message-content {
+    position: relative;
+    z-index: 3;
+
+    width: 100%;
+
+    padding: 25px 20px 45px;
+
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+/* JUDUL UCAPAN */
+
+.message-decoration {
+    text-align: center;
+    color: white;
+    font-size: 38px;
+    text-shadow: 0 2px 8px #527da4;
+    margin-bottom: 10px;
+}
+
+.message-content h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 48px;
+    font-weight: 700;
+    text-align: center;
+
+    color: #244e75;
+
+    text-shadow:
+        0 1px 2px white,
+        0 0 12px rgba(255,255,255,0.85);
+
+    margin-bottom: 18px;
+}
+
+.message-greeting {
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    font-size: 23px;
+    font-weight: 700;
+    color: #234d73;
+
+    text-shadow: 0 1px 5px white;
+
+    margin-bottom: 35px;
+}
+
+/* ISI PESAN */
+
+.message-text {
+    color: #183e62;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    line-height: 2.2;
+    text-align: center;
+
+    text-shadow:
+        0 1px 2px white,
+        0 0 5px white,
+        0 0 10px rgba(255,255,255,0.9);
+}
+
+.message-text p {
+    margin-bottom: 30px;
+}
+
+/* PENUTUP */
+
+.message-ending {
+    font-family: 'Dancing Script', cursive;
+    font-size: 24px;
+    font-weight: 700;
+
+    color: #244e75;
+
+    text-align: right;
+    line-height: 1.8;
+
+    text-shadow:
+        0 1px 3px white,
+        0 0 8px white;
+
+    margin-top: 40px;
+}
+
+/* TULISAN BAWAH */
+
+.bottom-note {
+    position: relative;
+    z-index: 3;
+
+    font-family: 'Dancing Script', cursive;
+    color: #315e85;
+
+    font-size: 23px;
+    font-weight: 600;
+
+    text-align: center;
+    margin-top: 50px;
+
+    text-shadow: 0 1px 5px white;
+}
+
+/* TOMBOL */
+
+.next-button {
+    position: relative;
+    z-index: 3;
+
+    margin-top: 25px;
+
+    text-decoration: none;
+    color: white;
+
+    background: rgba(65,120,175,0.8);
+    border: 1px solid rgba(255,255,255,0.7);
+
+    padding: 13px 25px;
+    border-radius: 30px;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.next-button:hover {
+    background: #477fae;
+    transform: translateY(-3px);
+}
+
+/* AWAN */
+
+.cloud {
+    position: absolute;
+
+    color: rgba(255,255,255,0.55);
+    font-size: 100px;
+
+    pointer-events: none;
+    animation: cloudMove linear infinite;
+
+    z-index: 0;
+}
+
+.cloud1 {
+    top: 8%;
+    left: -140px;
+    animation-duration: 42s;
+}
+
+.cloud2 {
+    top: 35%;
+    left: -150px;
+    font-size: 75px;
+    animation-duration: 50s;
+    animation-delay: 5s;
+}
+
+.cloud3 {
+    top: 65%;
+    left: -130px;
+    font-size: 110px;
+    animation-duration: 45s;
+    animation-delay: 10s;
+}
+
+.cloud4 {
+    top: 90%;
+    left: -150px;
+    font-size: 85px;
+    animation-duration: 55s;
+    animation-delay: 3s;
+}
+
+@keyframes cloudMove {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(120vw);
+    }
+}
+
+/* HATI MENGAMBANG */
+
+.floating-hearts span {
+    position: fixed;
+
+    color: rgba(255,255,255,0.7);
+    font-size: 23px;
+
+    pointer-events: none;
+    z-index: 2;
+
+    animation: heartFloat 7s ease-in-out infinite;
+}
+
+.floating-hearts span:nth-child(1) {
+    top: 15%;
+    left: 8%;
+}
+
+.floating-hearts span:nth-child(2) {
+    top: 28%;
+    right: 8%;
+}
+
+.floating-hearts span:nth-child(3) {
+    top: 48%;
+    left: 5%;
+}
+
+.floating-hearts span:nth-child(4) {
+    top: 60%;
+    right: 6%;
+}
+
+.floating-hearts span:nth-child(5) {
+    top: 80%;
+    left: 12%;
+}
+
+.floating-hearts span:nth-child(6) {
+    top: 90%;
+    right: 15%;
+}
+
+.floating-hearts span:nth-child(7) {
+    top: 38%;
+    left: 20%;
+}
+
+.floating-hearts span:nth-child(8) {
+    top: 72%;
+    right: 22%;
+}
+
+.floating-hearts span:nth-child(9) {
+    top: 5%;
+    right: 30%;
+}
+
+.floating-hearts span:nth-child(10) {
+    top: 95%;
+    left: 45%;
+}
+
+@keyframes heartFloat {
+    0%, 100% {
+        transform: translateY(0);
+        opacity: 0.35;
+    }
+
+    50% {
+        transform: translateY(-28px);
+        opacity: 0.9;
+    }
+}
+
+/* RESPONSIVE HP */
+
+@media (max-width: 600px) {
+
+    .main-content {
+        padding: 55px 15px 45px;
+    }
+
+    .main-title {
+        font-size: 40px;
+    }
+
+    .memory-section {
+        margin-top: 40px;
+    }
+
+    .photo-card {
+        width: 125px;
+        height: 155px;
+        opacity: 0.42;
+    }
+
+    .photo1 {
+        left: -12px;
+        top: 10px;
+    }
+
+    .photo2 {
+        right: -12px;
+        top: 190px;
+    }
+
+    .photo3 {
+        left: -10px;
+        top: 450px;
+    }
+
+    .photo4 {
+        right: -10px;
+        top: 700px;
+    }
+
+    .photo5 {
+        left: 30%;
+        top: 1000px;
+    }
+
+    .message-content {
+        padding: 20px 8px 40px;
+    }
+
+    .message-content h2 {
+        font-size: 40px;
+    }
+
+    .message-greeting {
+        font-size: 21px;
+    }
+
+    .message-text {
+        font-size: 13px;
+        line-height: 2.1;
+    }
+
+    .message-text p {
+        margin-bottom: 28px;
+    }
+
+    .message-ending {
+        font-size: 21px;
+    }
+
+    .bottom-note {
+        font-size: 19px;
+    }
+}
